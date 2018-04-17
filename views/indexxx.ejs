@@ -1,0 +1,93 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <title>Task Example</title>
+<style type="text/css">
+        #editor {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        }
+        #compiler {
+         position: relative;
+        left: 200px;
+        }
+        #theme{
+        position: relative;
+        left :3px ;
+        }
+        #submit-btn{
+        position: relative;
+        left :300px ; 
+        }
+    </style>
+</head>
+<body onload="myScript()">
+
+  <div class="container">
+    <div id="problemId">
+      <h2>Problem Statement #<%=problemId%></h2>
+      <h3> <%=problem.statement %></h3>
+      <p> <b>Input Description: </b> <%=problem.inputdescription %></p>
+      <p> <b>Output Description: </b> <%=problem.outputdescription %></p>
+      <p> <b>Input Example:<br/> </b> <%-inputexample %></p>
+      <p> <b>Output Example:<br/> </b> <%-outputexample %></p>
+      <p> <b>Explanation: </b> <%=problem.explaination %></p>
+      <br>
+    </div>
+    <p id = "time" hidden>4</p>
+    <select name="theme" id="theme">
+      <option value="chrome">Chrome</option>
+      <option value="monokai">Monokai</option>
+      <option value="twilight">Twilight</option>
+      <option value="xcode">XCode</option>
+      <option value="dracula">Dracula</option>
+      <option value="github">Github</option>
+      <option value="twilight">Twilight</option>
+      <option value="textmate">Textmate</option>
+      <option value="terminal">Terminal</option>
+      <option value="eclipse">Eclipse</option>
+    </select>
+
+    <select name="compiler" id="compiler">
+      <option value="python 2">Python 2</option>
+      <option value="python 3">Python 3</option>
+      <option value="cpp">CPP</option>
+      <option value="java">Java</option>
+    </select>
+    <br>
+    <div id="editor">
+        <textarea name="code" rows="10" cols="50" id = "code" placeholder="The cat was playing in the garden.">
+        </textarea>
+    </div>
+    <button type="button" name="submit-btn" id="submit-btn">Submit</button>
+    Result: <span id="result"></span><br>
+    <form name="Form1" style="font-size: 150%" action="#" >
+      <input type="checkbox"
+      name="radio1" 
+      onclick = "MyAlert()" />Custom Input
+      <br />
+    </form>
+    <input type="hidden" name="userid" id="userid" value="<%- userid %>">
+    <textarea name="customInput" rows="10" cols="35" id = "customInput">
+    </textarea>
+    <br>
+    <button type="button" name="run-btn" id="run-btn">Run</button>
+    <br>
+    <div class="ui segment" id="customOutput">
+    Evaluating...
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/../public/js/index.js">
+    </script>
+  </div>
+</body>
+
+
+
+

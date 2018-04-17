@@ -1,0 +1,24 @@
+<html lang="en">
+
+   <%- include partials/header %>
+   <!-- Main component for a primary marketing message or call to action -->
+   <% problemlist.forEach(function(each_problem){ %>
+      <div class="container">
+        <div>
+         <form id="downloadform" class="form-horizontal" role="form" method="post" action="/problem/<%= each_problem.id %>">        
+            <p>Problem Title: <%= each_problem.title %></p>
+            <p>Problem Statement: <%= each_problem.statement %></p>
+            <h3 class="panel-title"> 
+              <button id="btn-login" type="submit" class="btn btn-success">Solve Problem</button>                           
+            </h3>
+          </form>
+        </div>
+      </div>
+  <% }) %>
+      <p>Few Bugs
+        <ul>
+          <li>Currently None</li>
+          <li></li>
+        </ul>
+      </p>
+    <%- include partials/footer %>

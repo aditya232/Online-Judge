@@ -1,0 +1,74 @@
+<select name="compiler" id="compiler">
+  <option value="python 2">Python 2</option>
+  <option value="python 3">Python 3</option>
+  <option value="cpp">cpp</option>
+  <option value="java">Java</option>
+</select>
+<select name="theme" id="theme">
+  <option value="chrome">Chrome</option>
+  <option value="monokai">Monokai</option>
+  <option value="twilight">Twilight</option>
+  <option value="xcode">XCode</option>
+  <option value="dracula">Dracula</option>
+  <option value="github">Github</option>
+  <option value="twilight">Twilight</option>
+  <option value="textmate">Textmate</option>
+  <option value="terminal">Terminal</option>
+  <option value="eclipse">Eclipse</option>
+<head>
+</select>
+<style type="text/css">
+		#editor {
+	    position: relative;
+	    width: 500px;
+	    height: 400px;
+		}
+		#compiler {
+		 position: relative;
+    	left: 600px;
+		}
+		#theme{
+		position: relative;
+		left :3px ;
+		}
+		#btn{
+
+		}
+	</style>
+</head>
+
+<div id="editor">
+	<textarea name="code" rows="10" cols="50" id = "code" placeholder="The cat was playing in the garden.">
+	</textarea>
+</div>
+<button type="button" id="btn">Run Task</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src ="public/index.js">
+    /*var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.getSession().setMode("ace/mode/python");
+	var code = editor.getValue("code")
+mapping = {'python 2': 'python',
+'python 3':'python',
+'cpp':'c_cpp',
+'java':'java'
+}
+
+document.addEventListener('DOMContentLoaded',function() {
+    document.querySelector('select[name="compiler"]').onchange=changeEventHandlerCompiler;
+    document.querySelector('select[name="theme"]').onchange=changeEventHandlerTheme;
+},false);
+
+function changeEventHandlerCompiler(event) {
+    // You can use “this” to refer to the selected element.
+    if(!event.target.value) alert('Please Select One');
+    else editor.getSession().setMode(`ace/mode/${mapping[event.target.value]}`) ; 
+}
+
+function changeEventHandlerTheme(event) {
+    // You can use “this” to refer to the selected element.
+    if(!event.target.value) alert('Please Select One');
+    editor.setTheme(`ace/theme/${event.target.value}`);
+}  
+*/
+</script>
